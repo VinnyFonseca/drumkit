@@ -1,0 +1,23 @@
+{
+  "name": "drumkit",
+  "version": "1.0.0",
+  "description": "Digital drumkit experiment",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "Vinny Fonseca",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^3.2.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
+    "postcss": "^8.4.19",
+    "postcss-preset-env": "^7.8.3",
+    "sass": "^1.56.1"
+  }
+}

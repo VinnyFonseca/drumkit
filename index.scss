@@ -1,0 +1,180 @@
+* {
+  user-select: none;
+}
+
+.drumkit {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+img {
+  display: block;
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+}
+
+.area {
+  display: flex;
+  position: absolute;
+  border: 2px solid transparent;
+
+  &:after {
+    content: '';
+    display: block;
+    position: relative;
+    padding-top: 100%;
+  }
+}
+
+.hitbox {
+  display: block;
+  position: absolute;
+  padding: 5px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1vw;
+  font-weight: bold;
+  color: #FF8800;
+  border: 2px solid transparent;
+  border-radius: 100%;
+}
+
+.hihat {
+  z-index: 4;
+  width: 19.25%;
+  top: 43.25%;
+  left: 8.5%;
+
+  .hitbox {
+    border-color: #f00;
+    background-color: rgba(#f00, 0.25);
+  }
+
+  .closed {
+    inset: 20%;
+  }
+}
+
+.crash {
+  z-index: 5;
+  width: 22%;
+  top: 21.25%;
+  left: 16.25%;
+  transform: rotate(-25deg);
+
+  &:after {
+    padding-top: 88%;
+  }
+
+  .hitbox {
+    border-color: #0f0;
+    background-color: rgba(#0f0, 0.25);
+  }
+
+  .inner {
+    inset: 30%;
+  }
+}
+
+.ride {
+  z-index: 5;
+  width: 23.5%;
+  top: 21.25%;
+  left: 67.5%;
+  transform: rotate(35deg);
+
+  &:after {
+    padding-top: 93%;
+  }
+
+  .hitbox {
+    border-color: #00f;
+    background-color: rgba(#00f, 0.25);
+  }
+
+  .inner {
+    inset: 30%;
+  }
+}
+
+.snare {
+  zi: 2;
+  width: 16.75%;
+  top: 44%;
+  left: 26%;
+
+  &:after {
+    padding-top: 98%;
+  }
+
+  .hitbox {
+    border-color: #ff0;
+    background-color: rgba(#ff0, 0.25);
+  }
+
+  .outer {
+    inset: 12.5%;
+  }
+
+  .inner {
+    inset: 25%
+  }
+}
+
+.tom-high {
+  z-index: 3;
+  width: 12.25%;
+  top: 28.5%;
+  left: 37.75%;
+
+  .hitbox {
+    border-color: #f0f;
+    background-color: rgba(#f0f, 0.25);
+  }
+}
+
+.tom-medium {
+  z-index: 3;
+  width: 15%;
+  top: 28.5%;
+  left: 52.5%;
+
+  .hitbox {
+    border-color: #0ff;
+    background-color: rgba(#0ff, 0.25);
+  }
+}
+
+.tom-floor {
+  z-index: 2;
+  width: 18.75%;
+  top: 41.5%;
+  left: 63.75%;
+
+  .hitbox {
+    border-color: #000;
+    background-color: rgba(#000, 0.25);
+  }
+}
+
+.kick {
+  z-index: 1;
+  width: 10.5%;
+  top: 43%;
+  left: 46%;
+
+  &:after {
+    padding-top: 120%;
+  }
+
+  .hitbox {
+    border-color: #fff;
+    background-color: rgba(#000, 0.25);
+  }
+}
